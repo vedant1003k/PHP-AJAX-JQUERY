@@ -1,0 +1,7 @@
+1: mysqli_connect()
+2: mysqli_query()
+3: mysqli_connect_error()
+4: mysqli_error()
+5: mysqli_num_rows()
+6: mysqli_fetch_assoc()
+7: mysqli_close()

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Rotation</title>
+    <script type="text/javascript">
+        // Function to rotate the string
+        function rotateString() {
+            var str = document.getElementById("rotatedString").innerText;
+            var lastChar = str.charAt(str.length - 1);
+            var rotatedStr = lastChar + str.substring(0, str.length - 1);
+            document.getElementById("rotatedString").innerText = rotatedStr;
+        }
+
+        // Call rotateString() every 500 milliseconds (half a second)
+        setInterval(rotateString, 500);
+    </script>
+</head>
+<body>
+    <h1>Rotating String Example</h1>
+    <p id="rotatedString">w3resource</p>
+</body>
+</html>

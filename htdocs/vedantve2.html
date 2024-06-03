@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Until Summer Vacation</title>
+    <script>
+        function calculateDaysUntilVacation() {
+            // Get the start date of the vacation from the input field
+            const vacationStartDate = new Date(document.getElementById('vacation-start-date').value);
+            
+            // Get the current date
+            const currentDate = new Date();
+            
+            // Calculate the difference in time
+            const timeDifference = vacationStartDate - currentDate;
+            
+            // Calculate the difference in days
+            const dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+            
+            // Display the result
+            if (dayDifference > 0) {
+                document.getElementById('result').innerText = `There are ${dayDifference} days remaining until the summer vacation.`;
+            } else if (dayDifference === 0) {
+                document.getElementById('result').innerText = 'Today is the first day of the summer vacation!';
+            } else {
+                document.getElementById('result').innerText = 'The summer vacation has already started!';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Days Until Summer Vacation</h1>
+    <label for="vacation-start-date">Summer Vacation Start Date:</label>
+    <input type="date" id="vacation-start-date" required>
+    <br><br>
+    <button onclick="calculateDaysUntilVacation()">Calculate Days</button>
+    <p id="result"></p>
+</body>
+</html>

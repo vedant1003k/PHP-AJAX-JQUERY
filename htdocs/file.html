@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploading</title>
+</head>
+<body>
+    <!-- Use post method to Upload file, get will not allow to upload file -->
+    <form action="myFile.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="fileName" id="text" placeholder="Enter Name">
+        <br>
+        <input type="file" title="Upload" id="file" name="file">
+        <br>
+        <input type="submit" value="save">
+    </form>
+</body>
+</html>

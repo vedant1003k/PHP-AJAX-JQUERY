@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+    <body>
+        <div class="form">
+            <form action="readMySQL.php" method="post">
+                <!-- <label for="name">First Name</label>
+                <input type="text" name="name" id="name">
+                <br> -->
+                <!-- <label for="class">Class</label>
+            <input type="text" name="class" id="class"/> -->
+                <br>
+                <button type="submit" id="sub">Submit</button>
+            </form>
+        </div>
+        <style>
+        .form{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        #name{
+            width:200px;
+            height: 20px;
+            border-radius: 2%;
+            margin: 10px;
+        }
+        #name:hover{
+            background-color: rgb(157, 153, 145);
+        }
+        #class{
+            width:200px;
+            height: 20px;
+            border-radius: 2%;
+            margin: 10px;
+        }
+        #class:hover{
+            background-color: rgb(157, 153, 145);
+        }
+        #sub{
+            background-color: black;
+            color: white;
+            width: 100px;
+            border-radius: 5px;
+        }
+        #sub:hover{
+            background-color: white;
+            color: black;
+        }
+        </style>
+    </body>
+</html>

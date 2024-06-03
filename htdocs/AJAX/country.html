@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Country</title>
+        <script src="jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <label for="country">Country:</label>
+        <select name="countryList" id="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select>
+        <br>
+        <label for="count">State:</label>
+        <div id="count"></div>
+        <script>
+            $(document).ready(function(){
+                $("#country").change(function(){
+                    let country = $("#country").val();
+                    $("#count").load(`country.php?country=${country}`);
+                });
+            });
+        </script>
+    </body>
+</html>

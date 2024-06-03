@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Date Formats</title>
+    <script type="text/javascript">
+      function formatDate() {
+        // Get the current date
+        var today = new Date();
+
+        // Get day, month, and year
+        var day = String(today.getDate()).padStart(2, "0");
+        var month = String(today.getMonth() + 1).padStart(2, "0"); // January is 0
+        var year = today.getFullYear();
+
+        // Format the date
+        var mm_dd_yyyy = month + "-" + day + "-" + year;
+        var mm_slash_dd_yyyy = month + "/" + day + "/" + year;
+        var dd_mm_yyyy = day + "-" + month + "-" + year;
+        var dd_slash_mm_yyyy = day + "/" + month + "/" + year;
+
+        // Display the formatted dates
+        document.getElementById("mm-dd-yyyy").innerText = mm_dd_yyyy;
+        document.getElementById("mm/dd/yyyy").innerText = mm_slash_dd_yyyy;
+        document.getElementById("dd-mm-yyyy").innerText = dd_mm_yyyy;
+        document.getElementById("dd/mm/yyyy").innerText = dd_slash_mm_yyyy;
+      }
+    </script>
+  </head>
+  <body onload="formatDate()">
+    <h1>Current Date Formats</h1>
+    <p><strong>mm-dd-yyyy:</strong> <span id="mm-dd-yyyy"></span></p>
+    <p><strong>mm/dd/yyyy:</strong> <span id="mm/dd/yyyy"></span></p>
+    <p><strong>dd-mm-yyyy:</strong> <span id="dd-mm-yyyy"></span></p>
+    <p><strong>dd/mm/yyyy:</strong> <span id="dd/mm/yyyy"></span></p>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AJAX Intro</title>
+    </head>
+    <body>
+        <input
+            type="button"
+            name="call"
+            id="call"
+            value="CALL"
+            onclick="handleClick()"
+        >
+        <div id="res"></div>
+        <script>
+        function handleClick(){
+            //Making object of Method(XM) of AJAX available in JS
+            var request = new XMLHttpRequest();
+            //Getting data from json file
+            //request.open("GET","file.json");
+            request.open("GET","file.php?mobile=7683010682");
+            request.send();
+            //if(request.readyState == 4 && request.status == 200){
+                //parsing to convert in the json object format
+                //let res = JSON.parse(request.responseText);
+                //document.getElementById("name").innerHTML = res.name;
+            request.onreadystatechange = function(){
+                if(request.readyState === 4 && request.status === 200){
+                    var res = request.responseText;
+                    console.log(res);
+                    document.getElementById("res").innerHTML = res;
+                }
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Sunday of January</title>
+    <script type="text/javascript">
+      function findFirstSunday() {
+        var result = [];
+        for (var year = 2014; year <= 2050; year++) {
+          var date = new Date(year, 0, 1); // January is month 0
+          if (date.getDay() === 0) {
+            result.push(year);
+          }
+        }
+        document.getElementById("output").innerText = result.join(", ");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>First Sunday of January</h1>
+    <button onclick="findFirstSunday()">Find Years</button>
+    <p>Years where January 1st is a Sunday: <span id="output"></span></p>
+  </body>
+</html>

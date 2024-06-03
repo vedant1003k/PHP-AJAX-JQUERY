@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax With JQuery</title>
+        <script src="jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <label for="rollno">Enter Roll No</label>
+        <input type="text" name="rollno" id="rollno">
+        <br>
+        <div>Data:-</div>
+        <br>
+        <div id="res"></div>
+        <script>
+            $(document).ready(function(){
+                $("#rollno").keyup(function(){
+                    let roll = $("#rollno").val();
+                    $("#res").load(`getData.php?roll=${roll}`);
+
+                })
+            })
+        </script>
+    </body>
+</html>
