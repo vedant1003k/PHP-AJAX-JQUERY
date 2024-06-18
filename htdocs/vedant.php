@@ -24,15 +24,20 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 
 // print_r($_POST);
+
 $data = "insert into login(email,name) values('$email','$name')";
+
 echo "<br>";
+
 if (mysqli_query($con, $data)) { //(connection,query)
     echo "name => $name Inserted";
 } else {
     echo mysqli_error($con);
 }
 
-$sql = "SELECT * FROM login Where name = 'vedant' ";
+
+
+$sql = "SELECT * FROM login  ";
 
 $res = mysqli_query($con, $sql);
 

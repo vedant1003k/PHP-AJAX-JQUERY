@@ -5,6 +5,7 @@ $password = "";
 $db = "db";
 $conn = mysqli_connect($server, $username, $password, $db);
 $country = $_REQUEST['country'];
+
 if ($country == '')
     echo 'Data Not Found';
 else {

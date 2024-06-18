@@ -17,19 +17,19 @@
                         url:"file.php",
                         type:"POST",
                         data:{
-                            mobile:76830112213232130682
+                            mobile:1
                         },
                         success:function(data){
                             //$("#res").text(data)
                             $("#res").html(data)
                         }
                     }) 
-                    /*$.get("file.php?mobile=7683010682",function(data){
-                        $("#res").html(data)
-                    })*/
-                    $.post("file.php",{mobile:76830110682},function(data){
-                        // $("#res").html(data);
-                    })
+                    // $.get("file.php?mobile=7683010682",function(data){
+                    //     $("#res").html(data)
+                    // })
+                    // $.post("file.php",{mobile:76830110682},function(data){
+                    //     // $("#res").html(data);
+                    // })
                     // $("#res").load("file.php?mobile=7683010682")
 
                 })

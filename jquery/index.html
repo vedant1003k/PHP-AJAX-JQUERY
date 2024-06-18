@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="jquery-3.7.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          $("#hide").click(function () {
+            $("p").hide("slow", function () {
+              alert("The paragraph is now hidden");
+            });
+          });
+          $("#show").click(function () {
+            $("p").show("slow", function () {
+              alert("The paragraph is now shown");
+            });
+          });
+        });
+      </script>
+  </head>
+  
+  <body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <p>This is a paragraph that will be shown or hidden.</p>
+  </body>
+</html>
